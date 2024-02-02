@@ -1,0 +1,35 @@
+<mvc:View xmlns:mvc='sap.ui.core.mvc'
+xmlns='sap.m'
+controllerName="priyanka.controller.View1">
+<Page id="idPage" title="">
+<headerContent>
+
+<!-- <Button id="idBtn" text="Move Left" icon='sap-icon://arrow-left' press="callView2"></Button> -->
+<SearchField id="idSearch" search="onSearch"></SearchField>
+</headerContent>
+<List id="idList" items="{/ProductSet}" mode="SingleSelectMaster" delete="onDelete" selectionChange="onSelect" growing="true"
+growingThreshold="15" >
+<headerToolbar>
+<!-- <Toolbar>
+<SearchField id="idSearch" width="40%" search="onSearch"></SearchField>
+<Button id="idDlt" press="multiDelete" text="Delete" icon="sap-icon://delete"></Button>
+</Toolbar> -->
+</headerToolbar>
+<items>
+<ObjectListItem intro="{PRODUCT_ID}" title="{CATEGORY}" icon='{PRODUCT_PIC_URL}'
+number="{price}"
+numberUnit="{CURRENCY_CODE}">
+<firstStatus>
+<!-- <ObjectStatus text="{path:'availability',formatter:'.formatter.getStatus'}"
+                state="{path:'availability',formatter:'.formatter.getColorCode'}"></ObjectStatus> -->
+</firstStatus>
+    	<ObjectAttribute text="{SUPPLIER_ID}" title="{siWEIGHT_UNITze}" />
+        <ObjectAttribute text="{SUPPLIER_NAME}" title="Season:" />
+    </ObjectListItem>
+</items>
+</List>
+<footer>
+<Toolbar ></Toolbar>
+</footer>
+</Page>
+</mvc:View>

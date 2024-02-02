@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+            function FillInp(){
+              //  debugger;
+                var oInp = document.getElementById("idInp").value;
+                var oDiv = document.getElementById('idDiv');
+                var oText = document.createElement(oInp);
+                setTimeout(function(){
+                    alert("Javascript Async IO alert");
+                },2000);
+                oDiv.append(oInp);
+            }
+        </script>
+    </head>
+    <body>
+        <input id="idInp"></input>
+        <button id="idBtn" value="Show" onclick="FillInp()" >Show DATA</button>
+        <br>
+        <div id="idDiv"></div>
+    </body>
+</html>

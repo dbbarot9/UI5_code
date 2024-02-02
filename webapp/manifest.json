@@ -1,0 +1,137 @@
+{
+    "sap.app":
+    {
+        "id": "priyanka",
+        "type": "application",
+        "applicationVersion":
+        {
+            "version": "1.0.0"
+        },
+        "title":"{{appTitle}}",
+        "description":"{{appDescription}}",
+        "i18n": "i18n/i18n.properties",
+        "tags": 
+        {
+            "keywords": ["Dhaval","DB"]
+        },
+        "dataSources": {
+            "mainService":{
+                "uri": "/sap/opu/odata/sap/ZDB_JAN_PD1_SRV/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui":
+     {
+        "technology": "UI5",
+        "deviceTypes":
+        {
+            "desktop": true,
+            "phone": true,
+            "tablet": true
+        }
+    },
+    "sap.ui5":
+    {
+       "library": {},
+       "dependencies": 
+       {
+        "minUI5Version": "1.102.19"
+       },
+        "libs":
+        {
+            "sap.m":{"minVersion": "1.102.19"},
+            "sap.ui.layout":{"minVersion":"1.102.19"}
+        },
+        "contentDensities": 
+        {
+            "compact": true,
+            "cozy": true
+        },
+        "rootView":{
+            "viewName": "priyanka.view.App",
+            "id": "idRootView",
+            "type": "XML"
+        },
+        "routing": {
+            "config":{
+                "viewPath": "priyanka.view",
+                "viewType": "XML",
+                "clearControlAggregation": true,
+                "controlId": "idAppCon"
+
+            },
+            "routes":[
+                {
+                    "pattern": "",
+                    "name": "home",
+                    "target":["narendra","modi"]
+                },
+                {
+                    "pattern": "fruits/{fruitId}",
+                    "name": "detail",
+                    "target":["narendra","putin"]
+                },
+                {
+                    "pattern": "vendor/{supplierId}",
+                    "name": "supplier",
+                    "target":["narendra","trump"]
+                }
+            ],
+            "targets": {
+                "narendra":
+                {
+                    "viewName": "View1",
+                    "viewId": "idView1",
+                    "controlAggregation": "masterPages"
+                },
+                "modi":
+                {
+                    "viewName": "Empty",
+                    "viewId": "idEmpty",
+                    "controlAggregation": "detailPages"
+                },
+                "putin":
+                {
+                    "viewName": "View2",
+                    "viewId": "idView2",
+                    "controlAggregation": "detailPages"
+                },
+                "trump":
+                {
+                    "viewName": "Supplier",
+                    "viewId": "idSupplier",
+                    "controlAggregation": "detailPages"
+                }
+            }
+        },
+        "models":
+         {
+
+            "fruits":
+            {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "fruits/fruits.json"
+            },
+            "i18n":
+            {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties",
+                "settings":
+                {
+                    "bundleUrl": "i18n/i18n.properties",
+                    "bundleUrlRelativeTo": "manifest"
+                }
+            },
+            "":{
+                "type": "sap.ui.model.odata.v2.ODataModel",
+                "dataSource": "mainService",
+                "settings": {}
+            }
+        }
+    }
+}
+

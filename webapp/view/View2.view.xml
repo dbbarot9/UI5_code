@@ -1,0 +1,42 @@
+<mvc:View xmlns:mvc='sap.ui.core.mvc' xmlns:core="sap.ui.core"
+xmlns='sap.m'
+xmlns:f='sap.ui.layout.form'
+controllerName="priyanka.controller.View2">
+<Page id="idPage" title="View 2">
+<headerContent>
+<Button id="idBtn" text="Move Right" icon="sap-icon://arrow-right" press="callView1"></Button>
+</headerContent>
+<ObjectHeader intro="{PRODUCT_ID}" title="{CATEGORY}" icon="{PRODUCT_PIC_URL}" number="{PRICE}" numberUnit="{CURRENCY_CODE}"></ObjectHeader>
+<IconTabBar id='idIcon' class='sapUiResponsiveContentPadding'>
+<items>
+<IconTabFilter icon="sap-icon://warning" text="More Info">
+<core:Fragment type="XML" fragmentName="priyanka.fragments.moreinfo" ></core:Fragment>
+</IconTabFilter>
+<IconTabFilter icon="sap-icon://supplier" text="Supplier">
+<core:Fragment type="XML" fragmentName="priyanka.fragments.tabledata" ></core:Fragment>
+</IconTabFilter>
+<IconTabFilter icon="sap-icon://home" text="Cities">
+<content>
+<Select type="Default" items="{path:'/cities'}" >
+<items>
+<core:Item text="{name}" key="{name}"></core:Item></items>
+</Select>
+<ComboBox type="Default" items="{path:'/cities'}" >
+<items>
+<core:Item text="{name}" key="{name}"></core:Item></items>
+</ComboBox>
+<MultiComboBox type="Default" items="{path:'/cities'}" >
+<items>
+<core:Item text="{name}" key="{name}"></core:Item></items>
+</MultiComboBox>
+</content>
+</IconTabFilter>
+</items>
+</IconTabBar>
+<footer>
+<Toolbar><ToolbarSpacer></ToolbarSpacer>
+<Button id="idSave" type="Accept" press="onSave" text="Save"></Button>
+<Button id="idCancel" type="Reject" press="onReject" text="Cancel"></Button>
+</Toolbar></footer>
+</Page>
+</mvc:View>

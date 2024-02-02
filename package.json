@@ -1,0 +1,11 @@
+{
+  "name": "myfioriapp1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/ux-ui5-tooling": "^1.12.2"
+  }
+}

@@ -1,0 +1,5 @@
+<mvc:View xmlns:mvc='sap.ui5.core.mvc' 
+          xmlns='sap.m' 
+          controllerName='priyanka.controller.App'>
+<SplitApp id='idAppCon'></SplitApp>
+</mvc:View>

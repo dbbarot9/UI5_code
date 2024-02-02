@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-resourceroots='{
+            "priyanka":"./"
+        }'
+        data-sap-ui-bindingSyntax="complex"></script>
+        <script>
+            var oCompContainer = new sap.ui.core.ComponentContainer({
+                name:'priyanka'
+            });
+            oCompContainer.placeAt("oContent");
+
+        </script>
+        <!-- <script src="https://ui5.sap.com/resources/sap-ui-core.js"
+        data-sap-ui-libs="sap.m"
+        data-sap-ui-theme="sap_horizon"
+        data-sap-ui-resourceroots='{"dbarot02":"./"}'
+        data-sap-ui-bindingSyntax="complex"
+        ></script>
+        <script>
+            var oCompContainer = new sap.ui.core.ComponentContainer({
+                name:'dbarot02'     
+            });
+            oCompContainer.placeAt("oContent");
+        </script> -->
+    </head>
+    <body class="sapUiBody">
+        <!-- <h1>This is My UI5 Project</h1>  -->
+        <div id="oContent"></div>
+    </body>
+</html>
